@@ -7,8 +7,8 @@ import {
   DropdownToggle, DropdownMenu, DropdownItem
 } from 'reactstrap';
 
-// const baseURL = "http://localhost:8000/v1/products/items_img/?skip=0&limit=100";
-const baseURL = "http://127.0.0.1:8000/v1/products/clothes_img/?clothes_no=C50021"
+const baseURL = "http://localhost:8000/v1/products/items_img/?skip=0&limit=10";
+// const baseURL = "http://127.0.0.1:8000/v1/products/clothes_img/?clothes_no=C50021"
 //上線API網址
 // const baseURL = "https://simurgh01-qds5m4plcq-de.a.run.app/v1/products/items/?skip=0&limit=10";
 
@@ -43,8 +43,8 @@ const clothesData=()=>{
         //   <td>{post[i].clothes_no}</td>
         //   <td>{post[i].clothes_name}</td>
         // </tr>
-            <div class="col-sm" margin-bottom="100px">
-                <div class="card" style={{width: '18rem'}} >  {/* mt-5 為bootstrap提供card的上下左右間隔*/}
+            <div class="col-sm-3">
+                <div class="card mt-5" style={{width: '18rem'}} >  {/* mt-5 為bootstrap提供card的上下左右間隔*/}
                   <img class="card-img-top" src={post[i].clothes_img} alt="Card image cap" object-fit= "cover" width="500px"  height="500px" />
                   <div class="card-body">
                     <h5 class="card-title">{post[i].clothes_no}</h5>

@@ -12,22 +12,21 @@ code {
     monospace;
 }
 
-.carousel-inner {
+/*.carousel-inner {
   height: 0;
-  padding-bottom: 25%; /* this sets carousel aspect ratio (4:1 here) */
-}
+  padding-bottom: 25%; 
+}*/
 
-.carousel-item {
-  position: absolute !important; /* Bootstrap is insistent */
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.carousel-inner .carousel-item {
+height:500px;
+background-size:cover;
+background-position: center center;
 }
 
 .carousel-item img {
-  height: 100%; /* Bootstrap handles width already */
-  object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+  height: 100%; 
+  width: 100%;
+  object-fit: cover; 
 }
 
 
@@ -49,7 +48,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 position: relative;
 /* top: 10%; */
 /* right: 50%; */
-max-height: 500px;
+/* max-height: 500px; */
 }
 
 #root .container-fluid /*! 處理相同container(class name)，不同css style -> 加入外面那層tag的id或class */
@@ -61,4 +60,13 @@ max-height: 500px;
   /* background-color: black; */
   padding-left: 10%;
   padding-top: 1%;
+}
+
+.nav-item.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.nav-item.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
 }
