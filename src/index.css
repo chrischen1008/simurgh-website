@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.carousel-inner {
+  height: 0;
+  padding-bottom: 25%; /* this sets carousel aspect ratio (4:1 here) */
+}
+
+.carousel-item {
+  position: absolute !important; /* Bootstrap is insistent */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-item img {
+  height: 100%; /* Bootstrap handles width already */
+  object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+
+.card{
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+/* padding: 14px 80px 18px 36px; */
+cursor: pointer;
+}
+
+.card:hover{
+   transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card img{
+position: relative;
+/* top: 10%; */
+/* right: 50%; */
+max-height: 500px;
+}
+
+#root .container-fluid /*! 處理相同container(class name)，不同css style -> 加入外面那層tag的id或class */
+{
+  padding: 7%;
+}
+#test01 .container-fluid  /*! 處理相同container(class name)，不同css style -> 加入外面那層tag的id或class */
+{
+  /* background-color: black; */
+  padding-left: 10%;
+  padding-top: 1%;
+}
