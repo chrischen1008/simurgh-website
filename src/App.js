@@ -7,10 +7,11 @@ import {
   DropdownToggle, DropdownMenu, DropdownItem
 } from 'reactstrap';
 
-const baseURL = "http://localhost:8000/v1/products/items_img/?skip=0&limit=10";
+// const baseURL = "http://localhost:8000/v1/products/items_img/?skip=0&limit=10";
 // const baseURL = "http://127.0.0.1:8000/v1/products/clothes_img/?clothes_no=C50021"
 //上線API網址
 // const baseURL = "https://simurgh01-qds5m4plcq-de.a.run.app/v1/products/items/?skip=0&limit=10";
+const baseURL =process.env.REACT_APP_BASE_URL;
 
 function App() {
   const [post, setPost] = React.useState(null);

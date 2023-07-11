@@ -40,3 +40,14 @@ gcloud builds submit --tag asia.gcr.io/abstract-arbor-392000/container_web
 
 gcloud run deploy --image asia.gcr.io/abstract-arbor-392000/container_web --platform managed --port=3000
 ```
+
+
+## .env 讀取方法
+### .env : 必須REACT_APP開頭，雙引號可Optional
+```
+REACT_APP_TITLE=How To React
+REACT_APP_DESCRIPTION=Using .env file in React js
+REACT_APP_BASE_URL=http://localhost:8000/v1/products/items_img/?skip=0&limit=10
+```
+### js file
+```process.env.REACT_APP_BASE_URL```
