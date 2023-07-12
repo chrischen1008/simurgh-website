@@ -12,7 +12,7 @@ npm start
 
 ### 說明
 * Axios: Call API進行CRUD操作
-* Bootstrao: 畫面元件製作，需 import 官方程式
+* Bootstrap: 畫面元件製作，需 import 官方程式
 ```
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -49,5 +49,5 @@ REACT_APP_TITLE=How To React
 REACT_APP_DESCRIPTION=Using .env file in React js
 REACT_APP_BASE_URL=http://localhost:8000/v1/products/items_img/?skip=0&limit=10
 ```
-### js file
+### js file 讀取 env參數
 ```process.env.REACT_APP_BASE_URL```
