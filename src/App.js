@@ -61,24 +61,24 @@ const clothesData=()=>{
         //   <td>{post[i].clothes_no}</td>
         //   <td>{post[i].clothes_name}</td>
         // </tr>
-            <div class="col-sm-3">
-                <div class="card mt-5" style={{width: '18rem'}} >  {/* mt-5 為bootstrap提供card的上下左右間隔*/}
-                  <img class="card-img-top" src={post[i].clothes_img} alt="Card image cap" object-fit= "cover" width="500px"  height="500px" />
-                  <div class="card-body">
-                    <h5 class="card-title">{post[i].clothes_no}</h5>
-                    <p class="card-text">{post[i].clothes_name}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div className="col-sm-3">
+                <div className="card mt-5" style={{width: '18rem'}} >  {/* mt-5 為bootstrap提供card的上下左右間隔*/}
+                  <img className="card-img-top" src={post[i].clothes_img} alt="Card image cap" object-fit= "cover" width="500px"  height="500px" />
+                  <div className="card-body">
+                    <h5 className="card-title">{post[i].clothes_no}</h5>
+                    <p className="card-text">{post[i].clothes_name}</p>
+                    <a href="#" className="btn btn-primary">Go somewhere</a>
                   </div>
                 </div>
             </div>
 
         //
-        // <div class="card" style={{width: '18rem'}}>
-        //   <img class="card-img-top" src={post[i].clothes_img} alt="Card image cap" />
-        //   <div class="card-body">
-        //     <h5 class="card-title">{post[i].clothes_no}</h5>
-        //     <p class="card-text"></p>
-        //     <a href="#" class="btn btn-primary">Go somewhere</a>
+        // <div className="card" style={{width: '18rem'}}>
+        //   <img className="card-img-top" src={post[i].clothes_img} alt="Card image cap" />
+        //   <div className="card-body">
+        //     <h5 className="card-title">{post[i].clothes_no}</h5>
+        //     <p className="card-text"></p>
+        //     <a href="#" className="btn btn-primary">Go somewhere</a>
         //   </div>
         // </div>
         )
@@ -98,8 +98,8 @@ const clothesGalleryButtons=()=>{ //下方滑動按鈕
 const clothesGalleryFirst=()=>{ //第一張圖
   var output=[];
   output.push(
-    <div class="carousel-item active" data-bs-interval="2000">
-      <img src={post[0].clothes_img}  class="d-block w-100" alt="..." width="50%" height="auto" />
+    <div className="carousel-item active" data-bs-interval="2000">
+      <img src={post[0].clothes_img}  className="d-block w-100" alt="..." width="50%" height="auto" />
     </div>
   )
   return output;
@@ -110,8 +110,8 @@ const clothesGallery=()=>{
   var output=[];
   for(let i=1;i<post.length;i++){
       output.push(
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src={post[i].clothes_img} class="d-block w-100" alt="..." width="50%" height="auto" />
+            <div className="carousel-item" data-bs-interval="2000">
+              <img src={post[i].clothes_img} className="d-block w-100" alt="..." width="50%" height="auto" />
             </div>
       )
     }
@@ -119,95 +119,95 @@ const clothesGallery=()=>{
 }
 
   // return (
-  // <div class="container-fluid" style={{background:'rgb(245, 245, 245)'}}>
+  // <div className="container-fluid" style={{background:'rgb(245, 245, 245)'}}>
     
-  //   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  //   <div class="carousel-indicators" margin-top="100px">
-  //     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  //   <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+  //   <div className="carousel-indicators" margin-top="100px">
+  //     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
   //     {clothesGalleryButtons()}
   //     </div>
-  //     <div class="carousel-inner">
+  //     <div className="carousel-inner">
   //         {clothesGalleryFirst()}
   //         {clothesGallery()}
   //     </div>
-  //     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-  //       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  //       <span class="visually-hidden">Previous</span>
+  //     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  //       <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+  //       <span className="visually-hidden">Previous</span>
   //     </button>
-  //     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-  //       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  //       <span class="visually-hidden">Next</span>
+  //     <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  //       <span className="carousel-control-next-icon" aria-hidden="true"></span>
+  //       <span className="visually-hidden">Next</span>
   //     </button>
   //   </div>
   //   <figure>
   //     <img src="https://cms.cdn.91app.com/images/original/40984/63de816c-f437-4121-a54b-989ecef01d82-1670996644-u27xtj7h96_d_1200x75_800x50_400x25.jpg" display="block" width="100%"/>
   //   </figure>
-  //   <div class="row">
+  //   <div className="row">
   //     {clothesData()}
   //   </div>
   //   </div>
     
   // );
-  return (
-    <div>    
-      <nav class="navbar navbar-expand-lg fixed-top" style={{backgroundColor:'#f5f5f5'}} id="test01">
-      <div class="container-fluid">
-        <img src="https://cms.cdn.91app.com/images/original/40984/5b3063fc-4b59-42ae-a7f7-05bd98c65021-1672215451-fskh4d94va_d.png"/><a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+  return (   
+    <>
+      <nav className="navbar navbar-expand-lg fixed-top" style={{backgroundColor:'#f5f5f5'}} id="test01">
+      <div className="container-fluid">
+        <img src="https://cms.cdn.91app.com/images/original/40984/5b3063fc-4b59-42ae-a7f7-05bd98c65021-1672215451-fskh4d94va_d.png"/><a className="navbar-brand" href="#"></a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 獨家企劃
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                <li><a class="dropdown-item"><Link to="/About" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}}>Sù-Si舒仕裝系列</Link></a></li>
-                <li><a class="dropdown-item"><Link to ="/About" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}}>運動機能系列</Link></a></li>
-                <li><a class="dropdown-item" href="#">高爾夫系列</a></li>
+              <ul className="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><Link to="/About" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}} className="dropdown-item">Sù-Si舒仕裝系列</Link></li>
+                <li><Link to="/About" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}} className="dropdown-item">運動機能系列</Link></li>
+                <li><Link to="/About" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}} className="dropdown-item">高爾夫系列</Link></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 男裝
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">外套</a></li>
-                <li><a class="dropdown-item" href="#">上著</a></li>
-                <li><a class="dropdown-item" href="#">下著</a></li>
+              <ul className="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a className="dropdown-item" href="#">外套</a></li>
+                <li><a className="dropdown-item" href="#">上著</a></li>
+                <li><a className="dropdown-item" href="#">下著</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 女裝
               </a>
-              <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">外套</a></li>
-                <li><a class="dropdown-item" href="#">上著</a></li>
-                <li><a class="dropdown-item" href="#">下著</a></li>
+              <ul className="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a className="dropdown-item" href="#">外套</a></li>
+                <li><a className="dropdown-item" href="#">上著</a></li>
+                <li><a className="dropdown-item" href="#">下著</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <a className="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
                 穿搭合輯
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <a className="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
                 團服客製
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 關於SIMURGH
               </a>
-              <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">BLOG</a></li>
-                <li><a class="dropdown-item" href="#">媒體曝光</a></li>
-                <li><a class="dropdown-item" href="#">下載APP教學</a></li>
-                <li><a class="dropdown-item" href="#">創意手編｜布料再生奇蹟</a></li>
-                <li><a class="dropdown-item" href="#">實體門市</a></li>
+              <ul className="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a className="dropdown-item" href="#">BLOG</a></li>
+                <li><a className="dropdown-item" href="#">媒體曝光</a></li>
+                <li><a className="dropdown-item" href="#">下載APP教學</a></li>
+                <li><a className="dropdown-item" href="#">創意手編｜布料再生奇蹟</a></li>
+                <li><a className="dropdown-item" href="#">實體門市</a></li>
                 
               </ul>
             </li>
@@ -216,34 +216,34 @@ const clothesGallery=()=>{
       </div>
       </nav>
 
-        <div class="container-fluid" style={{background:'rgb(245, 245, 245)'}}>
+        <div className="container-fluid" style={{background:'rgb(245, 245, 245)'}}>
       
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators" margin-top="100px">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-indicators" margin-top="100px">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
           {clothesGalleryButtons()}
           </div>
-          <div class="carousel-inner">
+          <div className="carousel-inner">
               {clothesGalleryFirst()}
               {clothesGallery()}
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
         <figure>
           <img src="https://cms.cdn.91app.com/images/original/40984/63de816c-f437-4121-a54b-989ecef01d82-1670996644-u27xtj7h96_d_1200x75_800x50_400x25.jpg" display="block" width="100%"/>
         </figure>
-        <div class="row">
+        <div className="row">
           {clothesData()}
         </div>
         </div>
-      </div>
+      </>
   );
 }
 export default App;
