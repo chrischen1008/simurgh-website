@@ -61,7 +61,7 @@ const clothesData=()=>{
         //   <td>{post[i].clothes_no}</td>
         //   <td>{post[i].clothes_name}</td>
         // </tr>
-            <div className="col-sm-3">
+            <div className="col-sm-3" key={post[i].clothes_img}>
                 <div className="card mt-5" style={{width: '18rem'}} >  {/* mt-5 為bootstrap提供card的上下左右間隔*/}
                   <img className="card-img-top" src={post[i].clothes_img} alt="Card image cap" object-fit= "cover" width="500px"  height="500px" />
                   <div className="card-body">
@@ -89,7 +89,7 @@ const clothesGalleryButtons=()=>{ //下方滑動按鈕
   var output=[];
   for(let i=1;i<post.length;i++){
       output.push(
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={i} aria-label={{"Slide ":i+1}}></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={i} aria-label={{"Slide ":i+1}} key={i}></button>
       )
     } //data-bs-slide-to 按照索引新增
   return output;
@@ -98,7 +98,7 @@ const clothesGalleryButtons=()=>{ //下方滑動按鈕
 const clothesGalleryFirst=()=>{ //第一張圖
   var output=[];
   output.push(
-    <div className="carousel-item active" data-bs-interval="2000">
+    <div className="carousel-item active" data-bs-interval="2000" key={post[0].clothes_img}>
       <img src={post[0].clothes_img}  className="d-block w-100" alt="..." width="50%" height="auto" />
     </div>
   )
@@ -110,7 +110,7 @@ const clothesGallery=()=>{
   var output=[];
   for(let i=1;i<post.length;i++){
       output.push(
-            <div className="carousel-item" data-bs-interval="2000">
+            <div className="carousel-item" data-bs-interval="2000" key={post[i].clothes_img}>
               <img src={post[i].clothes_img} className="d-block w-100" alt="..." width="50%" height="auto" />
             </div>
       )
