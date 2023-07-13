@@ -24,6 +24,9 @@ import About from "./components/About";
 // import ContactUs component
 import ContactUs from "./components/ContactUs";
 //!----------------
+
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
 // const baseURL = "http://localhost:8000/v1/products/items_img/?skip=0&limit=10";
 // const baseURL = "http://127.0.0.1:8000/v1/products/clothes_img/?clothes_no=C50021"
 //上線API網址
@@ -37,7 +40,10 @@ function App() {
     axios.get(baseURL).then((response) => {
       setPost(response.data);
       // console.log(response.data);
-    });
+    }).catch(err => {
+      // Handle error
+      console.log(err);
+  });;
   }, []);
   
   if (!post) return null;
@@ -61,8 +67,8 @@ const clothesData=()=>{
         //   <td>{post[i].clothes_no}</td>
         //   <td>{post[i].clothes_name}</td>
         // </tr>
-            <div className="col-sm-3" key={post[i].clothes_img}>
-                <div className="card mt-5" style={{width: '18rem'}} >  {/* mt-5 為bootstrap提供card的上下左右間隔*/}
+            <div className="col-sm-2 d-flex align-items-stretch" key={post[i].clothes_img}>
+                <div className="card mt-2" style={{width: '18rem'}} >  {/* mt-5 為bootstrap提供card的上下左右間隔*/}
                   <img className="card-img-top" src={post[i].clothes_img} alt="Card image cap" object-fit= "cover" width="500px"  height="500px" />
                   <div className="card-body">
                     <h5 className="card-title">{post[i].clothes_no}</h5>
@@ -151,7 +157,7 @@ const clothesGallery=()=>{
   return (   
     <>
       <nav className="navbar navbar-expand-lg fixed-top" style={{backgroundColor:'#f5f5f5'}} id="test01">
-      <div className="container-fluid">
+      <div className="container">
         <img src="https://cms.cdn.91app.com/images/original/40984/5b3063fc-4b59-42ae-a7f7-05bd98c65021-1672215451-fskh4d94va_d.png"/><a className="navbar-brand" href="#"></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -165,7 +171,7 @@ const clothesGallery=()=>{
               <ul className="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                 <li><Link to="/About" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}} className="dropdown-item">Sù-Si舒仕裝系列</Link></li>
                 <li><Link to="/About" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}} className="dropdown-item">運動機能系列</Link></li>
-                <li><Link to="/About" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}} className="dropdown-item">高爾夫系列</Link></li>
+                <li><Link to="/ContactUS" style={{textDecoration: 'none',color:'var(--bs-dropdown-link-color)'}} className="dropdown-item">高爾夫系列</Link></li>
               </ul>
             </li>
             <li className="nav-item dropdown">

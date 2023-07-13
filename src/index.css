@@ -46,18 +46,18 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 
 .card img{
 position: relative;
-/* top: 10%; */
-/* right: 50%; */
-/* max-height: 500px; */
+/*top: 10%; 
+right: 50%; 
+ max-height: 500px; */
 }
-
-#root .container-fluid /*! 處理相同container(class name)，不同css style -> 加入外面那層tag的id或class */
+/*! 處理相同container(class name)，不同css style -> 加入外面那層tag的id或class */
+#root .container-fluid 
 {
-  padding: 7%;
+  padding: 5%;
 }
-#test01 .container-fluid  /*! 處理相同container(class name)，不同css style -> 加入外面那層tag的id或class */
+/*! 處理相同container(class name)，不同css style -> 加入外面那層tag的id或class */
+#test01 .container-fluid  
 {
-  /* background-color: black; */
   padding-left: 10%;
   padding-top: 1%;
 }
