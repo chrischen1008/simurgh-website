@@ -73,7 +73,7 @@ const clothesData=()=>{
                   <div className="card-body">
                     <h5 className="card-title">{post[i].clothes_no}</h5>
                     <p className="card-text">{post[i].clothes_name}</p>
-                    <a href="/#" className="btn btn-primary">Go somewhere</a>
+                    {/* <a href="/#" className="btn btn-primary">Go somewhere</a> */}
                   </div>
                 </div>
             </div>
@@ -158,7 +158,7 @@ const clothesGallery=()=>{
     <>
       <nav className="navbar navbar-expand-lg fixed-top" style={{backgroundColor:'#f5f5f5'}} id="test01">
       <div className="container">
-        <img src="https://cms.cdn.91app.com/images/original/40984/5b3063fc-4b59-42ae-a7f7-05bd98c65021-1672215451-fskh4d94va_d.png" alt="logo"/><a className="navbar-brand" href="/#">index</a>
+        <img src="https://cms.cdn.91app.com/images/original/40984/5b3063fc-4b59-42ae-a7f7-05bd98c65021-1672215451-fskh4d94va_d.png" alt="logo"/><a className="navbar-brand" href="/#"></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -243,10 +243,22 @@ const clothesGallery=()=>{
           </button>
         </div>
         <figure>
-          <img src="https://cms.cdn.91app.com/images/original/40984/63de816c-f437-4121-a54b-989ecef01d82-1670996644-u27xtj7h96_d_1200x75_800x50_400x25.jpg" alt="新品上市" display="block" width="100%"/>
+          <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/%E6%96%B0%E5%93%81%E4%B8%8A%E5%B8%82.jpg" alt="新品上市" display="block" width="100%"/>
         </figure>
-        <div className="row">
+        <div className="row justify-content-center">
           {clothesData()}
+        </div>
+        <figure style={{margin:'5%'}}>
+          <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/%E7%B5%90%E5%B8%B3%E6%BB%BF%E9%A1%8D.jpg" alt="結帳滿額" display="block" width="100%"/>
+        </figure>
+        <div className="youtube01">
+          {/* <!-- 16:9 aspect ratio --> */}
+          <div className="embed-responsive embed-responsive-16by9" style={{height:'100%'}}>
+            {/* <iframe class="embed-responsive-item" src="..."></iframe> */}
+            <iframe className="embed-responsive-item"  src="https://www.youtube.com/embed/Hg-yiimsd6g" title="【 SIMURGH | 石墨烯機能西裝 】溫度調節 x 機洗不皺 x 彈性舒適 ! 擺脫傳統正裝的束縛，休閒、運動、在外上班一件搞定！" frameBorder="0" width="50%" height="100%" postition="relative" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            {/* width="660" height="371"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  */}
+          </div>
         </div>
         </div>
       </>
