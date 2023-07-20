@@ -185,7 +185,7 @@ const rightButtons=()=>
 }
 const footer01=()=>{
   return(<div className="container-fluid" >
-  <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top ">
+  <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top  justify-content-center">
     <div className="col-4 mb-4 w-auto"> 
     <iframe name="f2bcf5254be2e18" width="342px" height="150px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameBorder="0" allowtransparency="true" allowFullScreen scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.10/plugins/page.php?app_id=511060513256789&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2e8500d08f21cc%26domain%3Dwww.simurgh.cc%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.simurgh.cc%252Ff21490b3d2ef2b%26relation%3Dparent.parent&amp;container_width=378&amp;height=130&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FSimurghTaiwan&amp;locale=zh_TW&amp;sdk=joey&amp;show_facepile=false&amp;show_posts=false&amp;width=342"  data-gtm-yt-inspected-15="true" className=""></iframe>
     {/* style="border: none; visibility: visible; width: 342px; height: 130px;" */}
