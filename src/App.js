@@ -124,6 +124,65 @@ const clothesGallery=()=>{
   return output;
 }
 
+const rightButtons=()=>
+{
+  return (
+  <div class="toolbox__container toolbox--bounce-in">
+  <div class="toolbox__item">
+    <div data-for="of5mvbrsvb" data-tip="tooltip" currentitem="false"><a rel="noreferrer"
+        class="toolbox__button false" href="https://www.instagram.com/simurgh.cc/" target="_blank"
+        style={{fontSize: '44.4444px', width:' 0.9em', height: '0.9em' ,borderRadius: '100%'}}><i
+          class="toolbox__icon icon icon-editor-icon_quick_ig_solid_round"></i>
+          <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/instagram.png" alt="" class="img-responsive img-rounded"/></a></div>
+          
+    {/* <div
+      class="__react_component_tooltip place-left type-dark tooltip--custom tooltip--custom--clickable toolbox__tooltip"
+      id="of5mvbrsvb" data-id="tooltip" style={{left: '1058px', top: '642px'}}><span>Instagram</span></div> */}
+  </div>
+  <div class="toolbox__item">
+    <div data-for="ts3cve9uyv" data-tip="tooltip" currentitem="false"><a rel="noreferrer"
+        class="toolbox__button false" href="https://m.me/SimurghTaiwan" target="_blank"
+        style={{fontSize: '44.4444px', width:' 0.9em', height: '0.9em' ,borderRadius: '100%'}}><i
+          class="toolbox__icon icon icon-editor-icon_messenger"></i><img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/messenger01.png" alt="" class="img-responsive img-rounded"
+          /></a></div>
+          
+    {/* <div
+      class="__react_component_tooltip place-left type-dark tooltip--custom tooltip--custom--clickable toolbox__tooltip"
+      id="ts3cve9uyv" data-id="tooltip" style={{left: '1058px', top: '692px'}}><span>FB Messenger</span></div> */}
+  </div>
+  <div class="toolbox__item">
+    <div data-for="vib121ci11" data-tip="tooltip" currentitem="false"><a rel="noreferrer"
+        class="toolbox__button false" href="https://line.naver.jp/ti/p/@simurgh" target="_blank"
+        style={{fontSize: '44.4444px', width:'0.9em' ,height:'0.9em', borderRadius: '100%'}}><i
+          class="toolbox__icon icon icon-editor-icon_line_round"></i>
+          <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/line.png" alt="" class="img-responsive img-rounded"/></a></div>
+          
+    {/* <div
+      class="__react_component_tooltip place-left type-dark tooltip--custom tooltip--custom--clickable toolbox__tooltip"
+      id="vib121ci11" data-id="tooltip" style={{left: '1114px', top: '742px'}}><span>LINE</span></div> */}
+  </div>
+  <div class="toolbox__item">
+    <div data-for="6wr0jzctpi" data-tip="tooltip" currentitem="false"><a rel="noreferrer"
+        class="toolbox__button false"
+        href="https://www.youtube.com/channel/UCnSgp99LeQl1C1CFiQD01eA" target="_blank" style={{fontSize: '40px', width:'0.9em' ,height:'0.9em', borderRadius: '100%'}}><i
+        class="toolbox__icon icon icon-editor-icon_line_round"></i>
+        <img
+          loading="lazy" class="img-responsive img-rounded"
+          src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/youtube.png"
+          alt="Youtube"/>
+        </a>
+        </div>
+        
+    {/* <div
+      class="__react_component_tooltip place-left type-dark tooltip--custom tooltip--custom--clickable toolbox__tooltip"
+      id="6wr0jzctpi" data-id="tooltip" style={{left: '1095px', top: '792px'}}><span>Youtube</span></div> */}
+  </div>
+  <div class="toolbox__item">
+    <div><a rel="noreferrer" class="toolbox__button toolbox__button--shadow" target="_blank"
+        style={{fontSize: '40px'}}><i class="toolbox__icon icon icon-top"></i></a></div>
+  </div>
+</div>);
+}
   // return (
   // <div className="container-fluid" style={{background:'rgb(245, 245, 245)'}}>
     
@@ -243,7 +302,7 @@ const clothesGallery=()=>{
           </button>
         </div>
         <figure className="text-center">
-          <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/image-banner01.jpg" className="img-fluid" alt="Responsive image" style={{width: '100%',marginTop:'5%'}}></img>
+          <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/image-banner01.jpg" className="img-fluid" alt="Responsive" style={{width: '100%',marginTop:'5%'}} />
         </figure>
         <figure>
           <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/%E6%96%B0%E5%93%81%E4%B8%8A%E5%B8%82.jpg" alt="新品上市" display="block" width="100%"/>
@@ -257,54 +316,62 @@ const clothesGallery=()=>{
         <div className="youtube01">
           {/* <!-- 16:9 aspect ratio --> */}
           <div className="embed-responsive embed-responsive-16by9" style={{height:'100%'}}>
-            {/* <iframe class="embed-responsive-item" src="..."></iframe> */}
+            {/* <iframe className="embed-responsive-item" src="..."></iframe> */}
             <iframe className="embed-responsive-item"  src="https://www.youtube.com/embed/Hg-yiimsd6g" title="【 SIMURGH | 石墨烯機能西裝 】溫度調節 x 機洗不皺 x 彈性舒適 ! 擺脫傳統正裝的束縛，休閒、運動、在外上班一件搞定！" frameBorder="0" width="50%" height="100%" postition="relative" 
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             {/* width="660" height="371"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  */}
           </div>
         </div>
-        <div class="container-fluid">
-        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top ">
-          <div class="col-4 mb-4 w-auto"> 
-          <iframe name="f2bcf5254be2e18" width="342px" height="130px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.10/plugins/page.php?app_id=511060513256789&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2e8500d08f21cc%26domain%3Dwww.simurgh.cc%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.simurgh.cc%252Ff21490b3d2ef2b%26relation%3Dparent.parent&amp;container_width=378&amp;height=130&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FSimurghTaiwan&amp;locale=zh_TW&amp;sdk=joey&amp;show_facepile=false&amp;show_posts=false&amp;width=342"  data-gtm-yt-inspected-15="true" class=""></iframe>
+        <div className="container-fluid" >
+        <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top ">
+          <div className="col-4 mb-4 w-auto"> 
+          <iframe name="f2bcf5254be2e18" width="342px" height="150px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameBorder="0" allowtransparency="true" allowFullScreen scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.10/plugins/page.php?app_id=511060513256789&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2e8500d08f21cc%26domain%3Dwww.simurgh.cc%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.simurgh.cc%252Ff21490b3d2ef2b%26relation%3Dparent.parent&amp;container_width=378&amp;height=130&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FSimurghTaiwan&amp;locale=zh_TW&amp;sdk=joey&amp;show_facepile=false&amp;show_posts=false&amp;width=342"  data-gtm-yt-inspected-15="true" className=""></iframe>
           {/* style="border: none; visibility: visible; width: 342px; height: 130px;" */}
-            <p class="text-muted">&copy; 2022</p>
+            <p className="text-muted">&copy; 2023</p>
           </div>
 
-          <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <div className="col mb-3">
+            <h5>關於我們</h5>
+            <ul className="nav flex-column">
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">品牌故事</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">商店簡介</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">隱私權及網站使用條款</a></li>
             </ul>
           </div>
 
-          <div class="col mb-3">
+          <div className="col mb-3">
             <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            <ul className="nav flex-column">
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">客服資訊</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">購物說明</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">客服留言</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">會員權益聲明</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">聯絡我們</a></li>
             </ul>
           </div>
 
-          <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <div className="col mb-3">
+            <h5>官方APP</h5>
+            <ul className="nav flex-column">
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
+              <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
+              <li className="nav-item mb-3">
+              
+              {/* <i className="fas fa-laptop fa-fw me-4"><img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/Google_Play_Store_badge_EN.svg.png" alt="Avatar" className="image"/></i> */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="bi bi-apple" viewBox="0 0 16 16">
+  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="bi bi-google-play" viewBox="0 0 16 16" style={{marginLeft:'5%'}}>
+  <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+</svg>
+              </li>
             </ul>
           </div>
         </footer>
         </div>
+        {rightButtons()}
         </div>
       </>
   );

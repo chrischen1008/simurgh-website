@@ -83,3 +83,18 @@ right: 50%;
   display: block;
   padding-top:50px;
 }
+
+.toolbox__container {
+  position: fixed;
+  z-index: 250;
+  bottom: 36px;
+  right: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.toolbox__item img.img-responsive.img-rounded{
+  max-height: 40px;
+  max-width: 40px;
+  margin-bottom:-40px;
+}
