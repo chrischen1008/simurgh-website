@@ -67,7 +67,7 @@ const clothesData=()=>{
         //   <td>{post[i].clothes_no}</td>
         //   <td>{post[i].clothes_name}</td>
         // </tr>
-            <div className="col-sm-2 d-flex align-items-stretch" key={post[i].clothes_img}>
+            <div className="col-sm-3 d-flex justify-content-center" key={post[i].clothes_img}>
                 <div className="card mt-2" style={{width: '18rem'}} >  {/* mt-5 為bootstrap提供card的上下左右間隔*/}
                   <img className="card-img-top" src={post[i].clothes_img} alt="Card cap" object-fit= "cover" width="500px"  height="500px" />
                   <div className="card-body">
@@ -358,7 +358,7 @@ const footer01=()=>{
         <figure>
           <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/%E6%96%B0%E5%93%81%E4%B8%8A%E5%B8%82.jpg" alt="新品上市" display="block" width="100%"/>
         </figure>
-        <div className="row justify-content-center">
+        <div className="d-flex align-content-stretch flex-wrap">
           {clothesData()}
         </div>
         <figure style={{margin:'5%'}}>
