@@ -76,3 +76,10 @@ right: 50%;
   margin-left: 5%;
   text-align: left;
 }
+
+.image-banner01
+{
+  text-align: center;
+  display: block;
+  padding-top:50px;
+}
