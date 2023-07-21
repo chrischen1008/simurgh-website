@@ -55,10 +55,6 @@ function App() {
     }
   }, [post]);
 
-  const handleClick = () => {
-    console.log("Button clicked.");
-    // 在這裡可以執行其他邏輯
-  };
   if (!post) return null;
   // console.log(post[0].clothes_no);
   const clothesData = () => {
