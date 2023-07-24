@@ -30,34 +30,62 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 // const baseURL = "http://127.0.0.1:8000/v1/products/clothes_img/?clothes_no=C50021"
 //上線API網址
 // const baseURL = "https://simurgh01-qds5m4plcq-de.a.run.app/v1/products/items/?skip=0&limit=10";
+// "products/items_img/?skip=0&limit=4"
 const baseURL = process.env.REACT_APP_BASE_URL;
 
 function App() {
   const [post, setPost] = React.useState(null);
+  const [banner, setBanner] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setPost(response.data);
-      // console.log(response.data);
-    }).catch(err => {
-      // Handle error
-      console.log(err);
-    });;
+    // axios.get(baseURL+'products/items_img/?skip=0&limit=4').then((response) => {
+    //   setPost(response.data);
+    //   // console.log(response.data);
+    // }).catch(err => {
+    //   // Handle error
+    //   console.log(err);
+    // });
+    // axios.get(baseURL+'products/banners').then((response) => {
+    //   setBanner(response.data);
+    //   // console.log(response.data);
+    // }).catch(err => {
+    //   // Handle error
+    //   console.log(err);
+    // });
+
+    const request1 = axios.get(baseURL + 'products/items_img/?skip=0&limit=4');
+    const request2 = axios.get(baseURL + 'products/banners');
+
+    axios.all([request1, request2]) //! 多個api呼叫: axios.all([list]) -> .then(axios.spread) ->依照list中的api順序，取得api資料
+      .then(axios.spread((...responses) => { //! (...responses) 是spread operator -> 代表整個list，也可以改寫成 (response1, response2,...以此類推)
+        const response1 = responses[0];
+        const response2 = responses[1];
+
+        setPost(response1.data);
+        setBanner(response2.data);
+        // You can perform further processing if needed.
+      }))
+      .catch(errors => {
+        // Handle errors for both requests here
+        console.log(errors);
+      });
+
   }, []);
   const buttonRef = useRef();
   useEffect(() => {
-    if (post && buttonRef.current) {
+    if (banner && buttonRef.current) {
       const interval = setInterval(() => {
         buttonRef.current.click();
       }, 3000); // 在這裡設定延遲時間，例如1000毫秒(1秒)
 
       return () => clearInterval(interval); // 在unmount時清除interval
     }
-  }, [post]);
+  }, [banner]);
 
   if (!post) return null;
+  if (!banner) return null;
   // console.log(post[0].clothes_no);
-  const clothesData = () => {
+  const ClothesData = () => {
     var output = [];
     for (let i = 0; i < post.length; i++) {
       output.push(
@@ -102,7 +130,7 @@ function App() {
   }
   const ClothesGalleryButtons = () => { //下方滑動按鈕
     var output = [];
-    for (let i = 1; i < post.length; i++) {
+    for (let i = 1; i < banner.length; i++) {
       output.push(
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={i} aria-label={{ "Slide ": i + 1 }} key={i}></button>
       )
@@ -113,8 +141,8 @@ function App() {
   const ClothesGalleryFirst = () => { //第一張圖
     var output = [];
     output.push(
-      <div className="carousel-item active" data-bs-interval="3000" key={post[0].clothes_img}>
-        <img src={post[0].clothes_img} className="d-block w-100" alt="..." width="50%" height="auto" />
+      <div className="carousel-item active" data-bs-interval="3000" key={banner[0].src}>
+        <img src={banner[0].src} className="d-block w-100" alt="..." width="50%" height="auto" />
       </div>
     )
     return output;
@@ -123,17 +151,17 @@ function App() {
 
   const ClothesGallery = () => {
     var output = [];
-    for (let i = 1; i < post.length; i++) {
+    for (let i = 1; i < banner.length; i++) {
       output.push(
-        <div className="carousel-item" data-bs-interval="3000" key={post[i].clothes_img}>
-          <img src={post[i].clothes_img} className="d-block w-100" alt="..." width="50%" height="auto" />
+        <div className="carousel-item" data-bs-interval="3000" key={banner[i].src}>
+          <img src={banner[i].src} className="d-block w-100" alt="..." width="50%" height="auto" />
         </div>
       )
     }
     return output;
   }
 
-  const RightButtons = () => {
+  const RightToolBox = () => {
     return (
       <div className="toolbox__container toolbox--bounce-in">
         <div className="toolbox__item">
@@ -321,7 +349,7 @@ function App() {
     )
   }
 
-  const MyComponent = () => {
+  const GalleryClickNext = () => {
   
     const handleClick = () => {
       console.log('Button clicked.');
@@ -364,7 +392,7 @@ function App() {
   //     <img src="https://cms.cdn.91app.com/images/original/40984/63de816c-f437-4121-a54b-989ecef01d82-1670996644-u27xtj7h96_d_1200x75_800x50_400x25.jpg" display="block" width="100%"/>
   //   </figure>
   //   <div className="row">
-  //     {clothesData()}
+  //     {ClothesData()}
   //   </div>
   //   </div>
 
@@ -390,7 +418,7 @@ function App() {
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button> */}
-          {MyComponent()}
+          {GalleryClickNext()}
         </div>
       </div>
       <div className="container" style={{ background: 'rgb(245, 245, 245)' }}>
@@ -401,7 +429,7 @@ function App() {
           <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/%E6%96%B0%E5%93%81%E4%B8%8A%E5%B8%82.jpg" alt="新品上市" display="block" width="100%" />
         </figure>
         <div className="d-flex align-content-stretch flex-wrap">
-          {clothesData()}
+          {ClothesData()}
         </div>
         <figure style={{ margin: '5%' }}>
           <img src="https://storage.googleapis.com/asia.artifacts.abstract-arbor-392000.appspot.com/static/%E7%B5%90%E5%B8%B3%E6%BB%BF%E9%A1%8D.jpg" alt="結帳滿額" display="block" width="100%" />
@@ -416,7 +444,7 @@ function App() {
           </div>
         </div>
         {Footer01()}
-        {RightButtons()}
+        {RightToolBox()}
       </div>
     </>
   );
