@@ -9,11 +9,11 @@ import {
     NavLink
   } from "react-router-dom";
 // import Home component
-import Home from "./Home";
+import Home from "./pages/Home";
 // import About component
-import About from "./About";
+import About from "./pages/About";
 // import ContactUs component
-import ContactUs from "./ContactUs";
+import ContactUs from "./pages/ContactUs";
 
 const Navbar01 = () => {
     return (

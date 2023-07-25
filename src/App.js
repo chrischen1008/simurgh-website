@@ -1,23 +1,6 @@
 import axios from "axios";
 import React,{ useEffect,useRef } from "react";
 
-// import {
-//   Container, Row, Col, Form, Input, Button, Navbar, Nav,
-//   NavbarBrand, NavItem, UncontrolledDropdown,
-//   DropdownToggle, DropdownMenu, DropdownItem
-// } from 'reactstrap';
-// ! router功能測試
-import {
-  BrowserRouter as Router,
-  //Switch, //! react router  V6後棄用
-  Route,
-  //Redirect, //! react router  V6後棄用
-  Routes, //! react router v6後需要用到 =v5 Switch
-  Navigate, //! react router v6後需要用到 =v5 Redirect
-  Link,
-  NavLink
-} from "react-router-dom";
-
 //! 模組化元件 
 import Footer01 from "./components/Footer.js"
 import Navbar01 from "./components/Navbar.js"
@@ -44,14 +27,6 @@ function App() {
     //   // Handle error
     //   console.log(err);
     // });
-    // axios.get(baseURL+'products/banners').then((response) => {
-    //   setBanner(response.data);
-    //   // console.log(response.data);
-    // }).catch(err => {
-    //   // Handle error
-    //   console.log(err);
-    // });
-
     const request1 = axios.get(baseURL + 'products/items_img/?skip=0&limit=4');
     const request2 = axios.get(baseURL + 'products/banners');
 
@@ -137,19 +112,15 @@ function App() {
     return output;
   }
 
-  const ClothesGalleryFirst = () => { //第一張圖
+  const ClothesGallery = () => {
     var output = [];
+    //第一張圖
     output.push(
       <div className="carousel-item active" data-bs-interval="3000" key={banner[0].src}>
         <img src={banner[0].src} className="d-block w-100" alt="..." width="50%" height="auto" />
       </div>
     )
-    return output;
-  }
-
-
-  const ClothesGallery = () => {
-    var output = [];
+    //其他圖
     for (let i = 1; i < banner.length; i++) {
       output.push(
         <div className="carousel-item" data-bs-interval="3000" key={banner[i].src}>
@@ -189,7 +160,6 @@ function App() {
             {ClothesGalleryButtons()}
           </div>
           <div className="carousel-inner">
-            {ClothesGalleryFirst()}
             {ClothesGallery()}
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -232,13 +202,3 @@ function App() {
   );
 }
 export default App;
-
-      // <h1>Hello</h1>
-      //       <Routes>
-      //           <Route path='/' element={<Home />}>
-      //               <Route index element={<Home />} />
-      //               <Route path='about' element={<About />} />
-      //               <Route path='dashboard' element={<About />} />
-      //               <Route path='*' element={<ContactUs />} />
-      //           </Route>
-      //       </Routes> 
