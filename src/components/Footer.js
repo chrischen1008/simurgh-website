@@ -1,4 +1,3 @@
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 const Footer01 = () => {
     return (<div className="container-fluid" >
       <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top  justify-content-between">
