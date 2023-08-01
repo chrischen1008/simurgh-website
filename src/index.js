@@ -9,7 +9,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter,Routes,Route,Outlet } from 'react-router-dom'
+// import Home component
+import Home from "./components/pages/Home";
+// import About component
+import About from "./components/pages/About";
+// import ContactUs component
+import ContactUs from "./components/pages/ContactUs";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -20,7 +26,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <BrowserRouter>
-    <App/>
+    {/* <App/> */}
+    <Routes>
+        <Route path="/" element={<App />} />
+        {/* 使用 <Outlet> 显示路由匹配的组件 */}
+        <Route path="/about" element={<About />} />
+        <Route path="/contactUS" element={<ContactUs />} />
+    </Routes>
     </BrowserRouter>
 );
 
