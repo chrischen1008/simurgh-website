@@ -19,7 +19,7 @@ const Navbar01 = () => {
     return (
       <nav className="navbar navbar-expand-lg fixed-top" style={{ backgroundColor: '#f5f5f5' }} id="test01">
         <div className="container">
-          <img src="https://cms.cdn.91app.com/images/original/40984/5b3063fc-4b59-42ae-a7f7-05bd98c65021-1672215451-fskh4d94va_d.png" alt="logo" /><a className="navbar-brand" href="/#"></a>
+          <Link to="/"><img src="https://cms.cdn.91app.com/images/original/40984/5b3063fc-4b59-42ae-a7f7-05bd98c65021-1672215451-fskh4d94va_d.png" alt="logo" /><a className="navbar-brand" href="/#"></a></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

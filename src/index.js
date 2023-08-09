@@ -16,6 +16,8 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 // import ContactUs component
 import ContactUs from "./components/pages/ContactUs";
+// import ContactUs component
+import ErrorPage from "./components/pages/ErrorPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -32,6 +34,7 @@ root.render(
         {/* 使用 <Outlet> 显示路由匹配的组件 */}
         <Route path="/about" element={<About />} />
         <Route path="/contactUS" element={<ContactUs />} />
+        <Route path="/ErrorPage" element={<ErrorPage />} />
     </Routes>
     </BrowserRouter>
 );

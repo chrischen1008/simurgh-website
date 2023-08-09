@@ -8,6 +8,13 @@ import RightToolBox from "./components/RightToolBox.js"
 //!----------------
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+//! google analytics套件
+import { useLocation,useNavigate  } from 'react-router-dom';
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-7L6EJLS3RB"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
 // const baseURL = "http://localhost:8000/v1/products/items_img/?skip=0&limit=10";
 // const baseURL = "http://127.0.0.1:8000/v1/products/clothes_img/?clothes_no=C50021"
 //上線API網址
@@ -18,7 +25,10 @@ const baseURL = process.env.REACT_APP_BASE_URL;
 function App() {
   const [post, setPost] = React.useState(null);
   const [banner, setBanner] = React.useState(null);
-
+  const location = useLocation();
+  //! 若遭遇API錯誤(Ex.資料庫斷線、API部署壞掉...等)->跳轉到顯示錯誤頁面(Ex.網站維護中、更新中...等) 
+  const navigate = useNavigate();
+  //
   React.useEffect(() => {
     // axios.get(baseURL+'products/items_img/?skip=0&limit=4').then((response) => {
     //   setPost(response.data);
@@ -29,7 +39,6 @@ function App() {
     // });
     const request1 = axios.get(baseURL + 'products/items_img/?skip=0&limit=4');
     const request2 = axios.get(baseURL + 'products/banners');
-
     axios.all([request1, request2]) //! 多個api呼叫: axios.all([list]) -> .then(axios.spread) ->依照list中的api順序，取得api資料
       .then(axios.spread((...responses) => { //! (...responses) 是spread operator -> 代表整個list，也可以改寫成 (response1, response2,...以此類推)
         const response1 = responses[0];
@@ -42,9 +51,12 @@ function App() {
       .catch(errors => {
         // Handle errors for both requests here
         console.log(errors);
+        navigate('/ErrorPage'); 
       });
-
-  }, []);
+    
+    //! GA
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [location]);
   const buttonRef = useRef();
   useEffect(() => {
     if (banner && buttonRef.current) {
